@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">50111</defaultcontrol>
+	<onload>Dialog.Close(fullscreeninfo,true)</onload>
+	<onload>Dialog.Close(videoosd,true)</onload>
+	<controls>
+		<control type="image">
+			<top>100</top>
+			<left>100</left>
+			<width>1720</width>
+			<height>880</height>
+			<texture colordiffuse="dd000000">bg.png</texture>
+		</control>
+		<control type="label">
+			<left>50</left>
+			<top>50</top>
+			<height>40</height>
+			<width>1820</width>
+			<aligny>center</aligny>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<autoscroll>false</autoscroll>
+			<font>font36_title</font>
+			<label>Links from the video</label>
+		</control>
+		<control type="group" id="33333">
+			<top>140</top>
+			<left>150</left>
+			<height>790</height>
+			<width>1720</width>
+			<control type="scrollbar" id="17">
+				<description>My first scroll bar control</description>
+				<left>500</left>
+				<top>0</top>
+				<width>50</width>
+				<height>800</height>
+				<visible>true</visible>
+				<texturesliderbackground colordiffuse="FFFFAAFF">mynormaltexture.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="FFFFAAFF">mynormaltexture.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="FFFFAAFF">mynormaltexture.png</texturesliderbarfocus>
+				<textureslidernib colordiffuse="FFFFAAFF">mynormaltexture.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="FFFFAAFF">mynormaltexture.png</textureslidernibfocus>
+				<pulseonselect/>
+				<orientation>vertical</orientation>
+				<showonepage>false</showonepage>
+				<onup>2</onup>
+				<ondown>3</ondown>
+				<onleft>50111</onleft>
+				<onright>50111</onright>
+			</control>
+			<control type="list" id="50111">
+				<description>My first list container</description>
+				<left>0</left>
+				<top>2</top>
+				<onup>44444</onup>
+				<ondown>44444</ondown>
+				<enable>true</enable>
+				<height>790</height>
+				<width>1620</width>
+				<visible>true</visible>
+				<onup>200</onup>
+				<ondown>87</ondown>
+				<onleft>17</onleft>
+				<onright>17</onright>
+				<viewtype label="3D list">list</viewtype>
+				<orientation>vertical</orientation>
+				<pagecontrol>25</pagecontrol>
+				<autoscroll>false</autoscroll>
+				<scrolltime tween="sine" easing="out">200</scrolltime>
+				<itemlayout width="1620" height="60">
+					<control type="label">
+						<left>5</left>
+						<top>5</top>
+						<height>50</height>
+						<width>800</width>
+						<aligny>center</aligny>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<autoscroll>false</autoscroll>
+						<font>font36_title</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>810</left>
+						<top>5</top>
+						<height>50</height>
+						<width>800</width>
+						<aligny>center</aligny>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<autoscroll>false</autoscroll>
+						<font>font36_title</font>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					
+				</itemlayout>
+				<focusedlayout width="1720" height="60">
+					<control type="image">
+						<width>1720</width>
+						<height>60</height>
+						<left>0</left>
+						<top>0</top>
+						<visible>Control.HasFocus(50111)</visible>
+						<texture colordiffuse="button_focus">lists/focus.png</texture>
+					</control>
+					<control type="label">
+						<left>5</left>
+						<top>5</top>
+						<height>50</height>
+						<width>850</width>
+						<aligny>center</aligny>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<autoscroll>false</autoscroll>
+						<font>font36_title</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>860</left>
+						<top>5</top>
+						<height>50</height>
+						<width>850</width>
+						<aligny>center</aligny>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<autoscroll>false</autoscroll>
+						<font>font36_title</font>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group" id="44444">
+			<top>890</top>
+			<left>100</left>
+			<height>100</height>
+			<width>1720</width>
+			<control type="button" id="5555">
+				<description>My first button control</description>
+				<left>400</left>
+				<top>5</top>
+				<width>250</width>
+				<height>70</height>
+				<visible>true</visible>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturenofocus colordiffuse="FFFFAAFF">mynormaltexture.png</texturenofocus>
+				<label>Cancel</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>80FFFFFF</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx/>
+				<textoffsety/>
+				<pulseonselect/>
+				<onfocus/>
+				<onunfocus/>
+				<onleft>7777</onleft>
+				<onright>6666</onright>
+				<onup>33333</onup>
+				<ondown>33333</ondown>
+			</control>
+			<control type="button" id="6666">
+				<description>My first button control</description>
+				<left>660</left>
+				<top>5</top>
+				<width>250</width>
+				<height>70</height>
+				<visible>true</visible>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturenofocus colordiffuse="FFFFAAFF">mynormaltexture.png</texturenofocus>
+				<label>Reload</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>80FFFFFF</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx/>
+				<textoffsety/>
+				<pulseonselect/>
+				<onfocus/>
+				<onunfocus/>
+				<onleft>5555</onleft>
+				<onright>7777</onright>
+				<onup>33333</onup>
+				<ondown>33333</ondown>
+			</control>
+			<control type="button" id="7777">
+				<description>My first button control</description>
+				<left>920</left>
+				<top>5</top>
+				<width>250</width>
+				<height>70</height>
+				<visible>true</visible>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturenofocus colordiffuse="FFFFAAFF">mynormaltexture.png</texturenofocus>
+				<label>Reply</label>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>80FFFFFF</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsetx/>
+				<textoffsety/>
+				<pulseonselect/>
+				<onfocus/>
+				<onunfocus/>
+				<onleft>6666</onleft>
+				<onright>5555</onright>
+				<onup>33333</onup>
+				<ondown>33333</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

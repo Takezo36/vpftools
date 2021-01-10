@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.vpftools" name="Video Platform Tools" version="0.0.1" provider-name="Benjamin Hebgen (Takezo36)">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.simplejson" version="3.17.0+matrix.2" />
+		<import addon="plugin.video.youtube" version="6.8.2+matrix.1" optional="true"/>
+		<import addon="plugin.video.twitch" version="2.5.1+matrix.1" optional="true"/>
+		<import addon="script.module.six" version="1.11.0"/>
+        <import addon="script.module.python.twitch" version="2.0.14"/>
+        <import addon="script.module.requests" version="2.9.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="plugin.py">
+        <provides>executable</provides>
+    </extension>
+	<extension point="xbmc.service" library="service.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Video Platform Tools like chat, comments, voting, go to the channel of the video</summary>
+		<description lang="en">Video Platform Tools like chat, comments, voting, go to the channel of the video</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+		<source>https://github.com/Takezo36/kodistuff</source>
+	</extension>
+</addon>

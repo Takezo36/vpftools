@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">50111</defaultcontrol>
+	<onload>Dialog.Close(fullscreeninfo,true)</onload>
+	<onload>Dialog.Close(videoosd,true)</onload>
+	<controls>
+		<control type="image" id="50113">
+			<top>800</top>
+			<left>0</left>
+			<width>500</width>
+			<height>90</height>
+			<texture colordiffuse="dd000000">bg.png</texture>
+		</control>
+		<control type="label">
+			<left>5</left>
+			<top>755</top>
+			<width>500</width>
+			<height>40</height>
+			<aligny>center</aligny>
+			<align>left</align>
+			<autoscroll>true</autoscroll>
+			<textcolor>FFFFFFFF</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+		</control>
+		<control type="image">
+			<top>750</top>
+			<left>0</left>
+			<width>510</width>
+			<height>50</height>
+			<texture colordiffuse="dd000000">bg.png</texture>
+		</control>
+		<control type="group" id="50112">
+			<top>750</top>
+			<left>0</left>
+			<height>140</height>
+			<width>500</width>
+			<control type="list" id="50111">
+				<description>My first list container</description>
+				<left>0</left>
+				<top>0</top>
+				<enable>true</enable>
+				<height>140</height>
+				<visible>true</visible>
+				<onup>200</onup>
+				<ondown>87</ondown>
+				<viewtype label="3D list">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>25</pagecontrol>
+				<autoscroll>false</autoscroll>
+				<scrolltime tween="sine" easing="out">200</scrolltime>
+				<itemlayout width="100" height="100">
+					<control type="image">
+						<left>5</left>
+						<top>55</top>
+						<width>80</width>
+						<height>80</height>
+						<texture diffuse="circle.png">$INFO[ListItem.Thumb]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout width="100" height="100">
+					<control type="image">
+						<width>90</width>
+						<height>90</height>
+						<left>0</left>
+						<top>50</top>
+						<visible>Control.HasFocus(50111)</visible>
+						<texture diffuse="circle.png" colordiffuse="button_focus">lists/focus.png</texture>
+					</control>
+					<control type="image" diffuse='circle.png'>
+						<left>5</left>
+						<top>55</top>
+						<width>80</width>
+						<height>80</height>
+						<texture diffuse="circle.png">$INFO[ListItem.Thumb]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>
